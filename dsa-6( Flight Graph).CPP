@@ -4,8 +4,8 @@ using namespace std;
 
 class Flight {
 private:
-    int am[10][10];               // Adjacency matrix
-    char city_index[10][10];      // Stores city names
+    int am[10][10];               
+    char city_index[10][10];      
     int city_count;
 
     int getCityIndex(const char* name); // Helper to get or insert city index
