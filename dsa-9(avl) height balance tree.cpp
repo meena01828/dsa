@@ -3,7 +3,6 @@
 #include <algorithm> // For max()
 using namespace std;
 
-// AVL Tree Node Structure
 class Node {
 public:
     string key, meaning;
@@ -18,12 +17,10 @@ public:
     }
 };
 
-// AVL Tree Class
 class AVL {
 private:
     Node* root;
 
-    // Utility functions
     int getHeight(Node* n) {
         return (n == NULL) ? 0 : n->height;
     }
@@ -72,7 +69,6 @@ private:
         node->height = max(getHeight(node->left), getHeight(node->right)) + 1;
         int balance = getBalanceFactor(node);
 
-        // Balancing cases
         if (balance > 1 && key < node->left->key)
             return rotateRight(node);
         if (balance < -1 && key > node->right->key)
