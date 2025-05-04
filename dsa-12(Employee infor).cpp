@@ -6,7 +6,6 @@ using namespace std;
 
 const char* FILENAME = "employee.txt";
 
-// Helper function to split a line into fields
 void parseRecord(const string& line, string& id, string& name, string& desig, string& salary) {
     int pos1 = line.find('|');
     int pos2 = line.find('|', pos1 + 1);
